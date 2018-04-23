@@ -216,10 +216,7 @@
  				// create PerfectScroll
 				this.ps = new PerfectScrollbar('#app', {
 					suppressScrollX: true,
-					swipeEasing: true,
-					handlers: [
-						'wheel', 'touch'
-					]
+					swipeEasing: true
 				})
 				this.scrollProgress = new ScrollProgress(this.$refs.scrollContainer)
 			},

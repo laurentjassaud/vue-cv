@@ -131,16 +131,16 @@
                     <div class="bloc-cv competences">
                         <ul>
                             <li class="font-0 noir"> 
-                                <span class="important">Javascript</span> dont Jquery, RequireJS, Vue.js, gsap ainsi que le task-runner Webpack
+                                <span class="important">Javascript</span> dont ReactJS, Vue.js, gsap ainsi que le task-runner Webpack
                             </li>
                             <li class="font-0 noir">
                                 <span class="important">HTML5</span> et l'optimisation pour mobile et tablette
                             </li>
                             <li class="font-0 noir">
-                                <span class="important">CSS3</span> avec les framework css bootstrap, les animations et le preprocesseur SASS
+                                <span class="important">CSS3</span> avec le framework css bootstrap, les animations et le preprocesseur SASS
                             </li>
                             <li class="font-0 noir">
-                                <span class="important">Design Graphique</span> régles de mises en page et de typographie
+                                <span class="important">Design Graphique</span> créativité et régles de mises en page
                             </li>
                             <li class="font-0 noir">
                                 <span class="important">Suite Adobe</span> Dont After Effects 
