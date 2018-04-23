@@ -1,0 +1,41 @@
+.banner {
+    background-image: url("./assets/images/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    font-family: $basefont;
+    position: relative;
+    .banner-text {
+        padding: 15vh 0 0 0;
+        h1 {
+            color: $white;
+            font-size: 3.375rem;/*54 16*/
+            letter-spacing: 20px;
+            font-weight: 700;
+            text-transform: uppercase;        
+            span {
+                opacity: 0.5;
+                color: $white;
+                font-size: 0.75rem;/*12 16*/
+                font-weight: 400;
+                letter-spacing: 3px;
+                line-height: 24px;
+                margin-top: 10px;
+                margin-bottom: 80px;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+
+        .banner-btn {
+            opacity: 0.5;
+        }
+    }
+}
+
+
+
+
+
+

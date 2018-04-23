@@ -1,0 +1,51 @@
+#footer {
+    text-align: left;
+    font-family: $basefont;
+    position: relative;
+    .footer-top {
+        background-color: $gray-1000;
+        height: 50vh;
+        .footer-col {
+            h5 {
+                color: $white;
+                margin-bottom: 20px;
+            }
+            p {
+                color: $gray-600;
+                font-weight: 700;
+            }
+            a {
+                color: $gray-400;
+                &:hover {
+                    color: $red;
+                    text-decoration: none;
+                }
+            }
+            .footer-share {
+                margin: 0;
+                padding:0;
+                li {
+                    display: inline-block;
+                    float: none;
+                    margin-right:1rem;
+                }
+                a {
+                    border: none;
+                    font-size: 21px;
+                    color: $gray-600;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

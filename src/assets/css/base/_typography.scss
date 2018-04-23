@@ -1,0 +1,257 @@
+//- Mixin: Fluid Type
+///
+/// Magic calc + vh to allow text to be fluid between minimum
+/// and maximum breakpoints.
+///
+/// @group typography
+/// @param {variable} $min-font-size [12px] - Minimum font size 
+/// @param {variable} $max-font-size [24px] - Maximum font size
+/// @param {variable} $lower-range [420px] - Stop scaling font smaller at this screen resolution 
+/// @param {variable} $upper-range [900px] - Stop scaling font larger at this screen resolution 
+/// @example
+///   h1 {
+///     @include responsive-type(20px, 48px);
+///   }
+/// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
+
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+    @media screen and (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+    @media screen and (min-width: $upper-range) {
+        font-size: $max-font-size;
+    }
+}
+
+/* SOMMAIRE
+-----------------------------------------------------
+FAMILLE 
+GRAISSE
+TAILLE
+HAUTEUR DE LIGNE
+DECALAGE
+COULEUR
+ALIGNEMENT
+STYLE
+
+-----------------------------------------------------
+*/
+
+
+/* FAMILLE */
+.font-base {
+    font-family: $basefont;
+}
+
+/*--------------------------------------------------*/
+
+
+/* GRAISSE */
+.extra{
+    font-weight: 200;
+}
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.semi {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.black {
+    font-weight: 900;
+}
+/*--------------------------------------------------*/
+
+@media #{$large-up} {
+    /* TAILLE */
+    .font-000 {
+        @include fluid-type( 17px, 18px, $large, $hd);
+    }
+    .font-00 {
+        @include fluid-type( 11px, 18px, $large, $hd);
+    }
+    .font-0 {
+        @include fluid-type( 18px, 21px, $large, $hd);
+    }
+    .font-1 {
+        @include fluid-type( 24px, 30px, $large, $hd);
+    }
+    .font-2 {
+        @include fluid-type( 28px, 36px, $large, $hd);
+    }
+    .font-5 {
+        @include fluid-type( 60px, 64px, $large, $hd);
+    }
+    .font-6 {
+        @include fluid-type( 110px, 118px, $large, $hd);
+    }
+}
+
+@media #{$base-up} {
+    /* TAILLE */
+    .font-000 {
+        @include fluid-type( 13px, 16px, 800px, 1399px);
+    }
+    .font-00 {
+        @include fluid-type( 11px, 16px, 800px, 1399px);
+    }
+    .font-0 {
+        @include fluid-type( 13px, 21px, 800px, 1399px);
+    }
+    .font-1 {
+        @include fluid-type( 13px, 24px, 800px, 1399px);
+    }
+    .font-2 {
+        @include fluid-type( 28px, 36px, 800px, 1399px);
+    }
+    .font-5 {
+        @include fluid-type( 34px, 64px, 800px, 1399px);
+    }
+    .font-6 {
+        @include fluid-type( 50px, 110px, 800px, 1399px );
+    }
+}
+
+@media #{$medium-down-portrait} {
+    /* TAILLE */
+    .font-000 {
+        @include fluid-type( 20px, 24px, 800px, 1399px);
+    }
+    .font-00 {
+        @include fluid-type( 21px, 30px, 800px, 1399px);
+    }
+    .font-0 {
+        @include fluid-type( 24px, 36px, 800px, 1399px);
+    }
+    .font-1 {
+        @include fluid-type( 28px,40px, 800px, 1399px);
+    }
+    .font-2 {
+        @include fluid-type( 28px, 36px, 800px, 1399px);
+    }
+    .font-5 {
+        @include fluid-type( 66px, 70px, 800px, 1399px);
+    }
+    .font-6 {
+        @include fluid-type( 100px, 110px, 800px, 1200px);
+    }
+}
+
+@media #{$small-down-portrait} {
+    /* TAILLE */
+    .font-000 {
+        @include fluid-type( 12px, 16px, 320px, $small);
+    }
+    .font-00 {
+        @include fluid-type( 10px, 18px, 320px, $small);
+    }
+    .font-0 {
+        @include fluid-type( 13px, 21px, 320px, $small);
+    }
+    .font-1 {
+        @include fluid-type( 12px, 24px, 320px, $small);
+    }
+    .font-2 {
+        @include fluid-type( 14px, 36px, 320px, $small);
+    }
+    .font-5 {
+        @include fluid-type( 24px, 42px, 320px, $small);
+    }
+    .font-6 {
+        @include fluid-type( 36px, 96px, 320px, $small);
+    }
+}
+
+@media #{$small-down-landscape} {
+    /* TAILLE */
+    .font-000 {
+        @include fluid-type( 12px, 16px, 600px, $large);
+    }
+    .font-00 {
+        @include fluid-type( 10px, 18px, 600px, $large);
+    }
+    .font-0 {
+        @include fluid-type( 13px, 21px, 600px, $large);
+    }
+    .font-1 {
+        @include fluid-type( 12px, 24px, 600px, $large);
+    }
+    .font-2 {
+        @include fluid-type( 14px, 36px, 600px, $medium);
+    }
+    .font-5 {
+        @include fluid-type( 24px, 42px, 600px, $medium);
+    }
+    .font-6 {
+        @include fluid-type( 36px, 78px, 600px, $medium);
+    }
+}
+
+
+/*--------------------------------------------------*/
+
+
+/* HAUTEUR DE LIGNE */
+
+.l-5 {
+    line-height: 1.5;
+}
+
+/*--------------------------------------------------*/
+
+
+/* DECALAGE */
+
+.dec-1{
+
+}
+
+.dec-2 {
+    margin-top: -6rem;
+}
+
+/*--------------------------------------------------*/
+
+
+/* COULEUR */
+
+.white {
+    color: $white;
+}
+
+.noir {
+    color: $black;
+}
+
+
+/*--------------------------------------------------*/
+
+
+/* ALIGNEMENT */
+
+
+/*--------------------------------------------------*/
+
+.ref-2 {
+    align-items: flex-end;
+    line-height: 0.70;    
+}
+/*--------------------------------------------------*/
+
+/* STYLE */
+
+/*--------------------------------------------------*/
+
+.up {
+    text-transform: uppercase;
+}

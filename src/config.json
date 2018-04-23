@@ -1,0 +1,124 @@
+{
+    "families": [
+        "Source+Sans+Pro:200,400,600,900"
+    ],
+    "fontAwesome": false,
+    "content": [
+        {
+            "nom": "Ease", 
+            "image": {
+                "desk": "ease.jpg",
+                "mobile": "ease_opt_mobile.jpg"
+            }, 
+            "ref": "ease" 
+        },
+        {
+            "nom": "Export & strategy", 
+            "image": {
+                "desk": "export&strategy.jpg",
+                "mobile": "export&strategy_opt_mobile.jpg"
+            }, 
+            "ref": "export&strategy" 
+        },
+        {
+            "nom": "Galerie Gillig", 
+            "image": {
+                "desk": "galerie_gillig.jpg",
+                "mobile": "galerie_gillig_opt_mobile.jpg"
+            }, 
+            "ref": "galerie_gillig" 
+        },
+        {
+            "nom": "Internship community", 
+            "image": {
+                "desk": "ic.jpg",
+                "mobile": "ic_opt_mobile.jpg"
+            }, 
+            "ref": "ic" 
+        },
+        {
+            "nom": "La Saline", 
+            "image": {
+                "desk": "la_saline.jpg",
+                "mobile": "la_saline_opt_mobile.jpg"
+            }, 
+            "ref": "la_saline" 
+        },
+        {
+            "nom": "Marckolsheim",
+            "image": {
+                "desk": "marckolsheim.jpg",
+                "mobile": "marckolsheim_opt_mobile.jpg"
+            }, 
+            "ref": "marckolsheim" 
+        },
+        {
+            "nom": "Mathis",
+            "image": {
+                "desk": "mathis.jpg",
+                "mobile": "mathis_opt_mobile.jpg"
+            },  
+            "ref": "mathis" 
+        },
+        {
+            "nom": "Vignerons indépendants", 
+            "image": {
+                "desk": "vignerons.jpg",
+                "mobile": "vignerons_opt_mobile.jpg"
+            }, 
+            "ref": "vignerons" 
+        },
+        {
+            "nom": "Wittenheim",
+            "image": {
+                "desk": "wittenheim.jpg",
+                "mobile": "wittenheim_opt_mobile.jpg"
+            },  
+            "ref": "wittenheim" 
+        }
+    ],
+    "bg": [
+        {
+            "ref": "bg_1", 
+            "image": {
+                "desk": "bg/grid-anim-visuel.png",
+                "mobile": "bg/grid-anim_opt_mobile.png"
+            }
+        },
+        {
+            "ref": "bg_2", 
+            "image": {
+                "desk": "bg/pirate_desk.jpg",
+                "mobile": "bg/pirate_mobile.jpg"
+            }
+        },
+        {
+            "ref": "bg_3", 
+            "image": {
+                "desk": "bg/vecto.png",
+                "mobile": "bg/vecto_opt_mobile.png"
+            }
+        },
+        {
+            "ref": "bg_4", 
+            "image": {
+                "desk": "bg/portrait.jpg",
+                "mobile": "bg/portrait_opt_mobile.jpg"
+            }
+        },
+        {
+            "ref": "bg_5", 
+            "image": {
+                "desk": "bg/comp.png",
+                "mobile": "bg/comp.png"
+            }
+        },
+        {
+            "ref": "distort", 
+            "image": {
+                "desk": "distortion/noise.png",
+                "mobile": "distortion/noise.png"
+            }
+        }
+    ]
+}

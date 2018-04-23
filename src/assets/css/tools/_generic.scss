@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    font-size: 1rem;
+    background-color: $base;
+    overflow-x: hidden;
+}

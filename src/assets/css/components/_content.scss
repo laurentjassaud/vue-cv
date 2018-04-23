@@ -1,0 +1,48 @@
+body:before,
+body:after {
+    z-index: -1;
+    content: '';
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--gridSize));
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 1600px;
+    margin: auto;
+    background: -webkit-linear-gradient(0deg, #f2f2f2 1px, transparent 0px) 0 0 / var(--gridSize) auto;
+}
+
+.nombre-titre{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    h3{
+        display: flex;
+        align-items: center;
+        span {
+            color: $grey;
+        }
+    }
+    p{
+        text-align: center;
+        margin-top: 12px;
+        line-height: 1.4;
+    }
+}
+.accroche{
+    margin-top:-0.5rem;
+}
+.arrow{
+    flex-direction: column;
+    justify-content: center;
+    p{
+        margin-bottom: 12px;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}

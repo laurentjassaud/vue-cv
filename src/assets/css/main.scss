@@ -1,0 +1,67 @@
+/* Bootstrap
+   ========================================================================== */
+// @import "bootstrap/bootstrap-config";
+
+
+/* Font Awesome
+   ========================================================================== */
+// @import "./font-awesome/fontawesome.scss";
+// @import "./font-awesome/fa-solid.scss";
+// @import "./font-awesome/fa-brands.scss";
+
+
+/* Variables
+   ========================================================================== */
+// @import "bootstrap/bootstrap-variables-modified";
+
+:root {
+    --padding: 100px;
+    --cols: 16;
+    --rows: 8;
+    --gridSize: calc((100vw - var(--padding)) / var(--cols));
+    --maxSize: 100px;
+}
+
+$base:#394dd0;
+$white: #ffffff;
+$black: #1f1f1f;
+$basefont: "Source Sans Pro", sans-serif;
+
+
+/* MISC
+   ========================================================================== */
+@import "tools/reset";
+// @import "tools/helpers";
+@import "tools/responsive";
+@import "tools/generic";
+@import "tools/debug";
+@import "vendor/perfect-scroll";
+
+
+/* Base
+   ========================================================================== */
+@import "base/typography";
+// @import "base/layout";
+// @import "base/grid";
+
+
+/* Components
+   ========================================================================== */
+@import "components/app";
+@import "components/noise";
+@import "components/back-grid";
+@import "components/content-grid";
+@import "components/image-modal";
+// @import "components/content-grid2";
+// @import "components/content-grid3";
+// @import "components/header";
+// @import "components/banner";
+// @import "components/intro";
+// @import "components/services";
+// @import "components/work";
+// @import "components/team";
+// @import "components/testimonials";
+// @import "components/contact";
+// @import "components/footer";
+// @import "components/content";
+@import "components/preloader";

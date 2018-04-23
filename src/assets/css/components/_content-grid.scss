@@ -1,0 +1,424 @@
+@media #{$hd-up} {
+    :root {
+        --gridSize: 100px;
+    }
+}
+
+@media #{$medium-down-portrait} {
+    :root {
+        --padding: 60px;
+        --cols: 12;
+        --rows: 18;
+        --gridSize: calc((100vw - var(--padding)) / var(--cols));
+    }
+}
+/*
+@media #{$medium-down-landscape} {
+    :root {
+        --padding: 24px;
+    }
+}
+*/
+@media #{$small-down-portrait} {
+    :root {
+        --padding: 24px;
+        --cols: 12;
+        --rows: 18;
+        --gridSize: calc((100vw - var(--padding)) / var(--cols));
+    }
+}
+
+@media #{$small-down-landscape} {
+    :root {
+        --padding: 24px;
+        --cols: 22;
+        --rows: 10;
+        --gridSize: calc((100vw - var(--padding)) / var(--cols));
+    }
+}
+
+#content-grid {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    @media #{$hd-up}{
+        //background-color: black;
+    }
+
+    @media #{$large-up} {
+        //background-color: indigo;
+    }
+
+    @media #{$base-up} {
+        //background-color: red;
+    }
+
+    @media #{$medium-down-landscape} {
+        //background-color: pink;
+    }
+
+    @media #{$medium-down-portrait} {
+        //background-color: grey;
+    }
+
+    @media #{$small-down-portrait} {
+        //calculer dans grid.vue pour gerer la barre de navigation
+        //background-color: yellow;
+    }
+
+    @media #{$small-down-landscape} {
+        //background-color: green;
+        //calculer dans grid.vue pour gerer la barre de navigation
+    }
+    /* COULEUR DE FOND */
+
+    .bg-white {
+        background-color: $white;
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .bg-black {
+        background-color: $black;
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    /* NIVEAUX */
+
+    #grid-niveau-1{
+        position: fixed;
+        z-index: 1;
+        opacity: 1;
+    }
+    
+    #grid-niveau-2 {
+        position: fixed;
+        z-index: 2;
+        opacity: 0;
+        @media #{$small-down-landscape} {
+            h5 {
+                margin-left:-24px;
+            }
+        }
+    }
+
+    #grid-niveau-3 {
+        position: fixed;
+        z-index: 3;
+        opacity: 0;
+        .redactionnel {
+            .bloc-cv {
+                border-top: 1px dashed $black;
+                @media #{$small-down-landscape} {
+                    border-top: none;
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+
+    #grid-niveau-4 {
+        position: fixed;
+        z-index: 5;
+        opacity: 0;
+        li{                 
+            cursor:pointer;
+            i{
+                margin-right :20px;
+                font-size: 12px;
+            }
+        }
+        @media #{$small-down-landscape} {
+            .ref-work-1{
+                margin-top: 60px;
+            }
+            .bloc-cv {
+                padding-top: 12px;
+            }
+            li{
+                float: left;
+                width: 40%;
+            }
+        }
+    }
+
+    #grid-niveau-5 {
+        position: fixed;
+        z-index: 4;
+        opacity: 0;
+        a:link,
+        a:hover,
+        a:visited,
+        a:active{  
+            position: relative;
+            z-index: 6;                
+            i{
+                color: $white; 
+            }
+        }
+        @media #{$small-down-landscape} {
+            .bloc-cv {
+                padding-top: 40px;
+
+            }
+        }
+
+    }
+
+    .content-grid__container {
+        //border: 1px dashed yellow;
+        width: auto;
+        max-width: 1600px;
+        //overflow: hidden;
+        grid-template-columns: repeat(var(--cols), var(--gridSize));
+        grid-template-rows: repeat(var(--rows), var(--gridSize));
+        display: grid;
+        grid-gap: 0px;
+        & > div{
+            //border: 1px red solid;
+            //overflow: hidden;
+            display: flex;
+            position: relative;
+        }
+
+        .grid-cellule-base {
+            width: var(--gridSize);
+            max-width: var(--maxSize);
+            height: var(--gridSize);
+            min-height: var(--gridSize);
+            max-height: var(--maxSize);
+            grid-row: span 1 / span 1;
+            grid-column: span 1 / span 1;
+        }
+
+        .border-debug {
+            border:1px solid yellow;
+        }
+
+        .nav {
+            width: calc(var(--gridSize) * 6);
+            transform-origin: top left;
+            transform: rotate(90deg);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 16px;
+            //border: 2px solid transparent;
+            span {
+                letter-spacing: 2px; 
+                line-height: 16px;
+
+            }
+            i {
+                opacity: 0;
+                margin-left: 12px;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                position: relative;
+                top: 4px;
+                fill: $white;
+                &.noir {
+                    fill: $black;
+                }
+            }
+        }
+
+        // ELEMENT NIVEAU #1
+        .ref-1 {
+            align-items: flex-end;
+            line-height: 0.70;
+            letter-spacing: 6px;
+            @media #{$small-down-portrait} {
+                align-items: center;
+                letter-spacing: 2px;
+                font-weight: 900;
+            }
+            @media #{$small-down-landscape} {
+                align-items: center;
+                letter-spacing: 4px;
+                font-weight: 900;
+            }
+        }
+
+        .ref-3 {
+            @media #{$small-down-portrait} {
+                align-items: top;
+                font-weight: 300;
+                letter-spacing: 1px;
+                margin-top:-10%;
+            }
+            @media #{$small-down-landscape} {
+                margin-top: 0%;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+        }
+
+        .ref-4,
+        .ref-6 {
+            @media #{$small-down-portrait} {
+                letter-spacing: 0px;
+                line-height: 1.25;
+            }
+            @media #{$small-down-landscape} {
+                letter-spacing: 1px;
+                line-height: 1.25;
+            }
+        }
+
+        .ref-5 {
+            div{
+                @media #{$medium-down-portrait} {
+                    margin-left:-12px;
+                }
+                @media #{$small-down-portrait} {
+                    font-size: 5vh!important;
+                }
+                @media #{$small-down-landscape} {
+                    font-size: 9vh !important;
+                }
+            }
+        }
+        
+        .ref-7,
+        .ref-8 {
+            div span{
+                @media #{$small-down-portrait} {
+                    font-weight: 400;
+                    line-height: 1.25;
+                }
+                @media #{$small-down-landscape} {
+                    font-weight: 400;
+                    line-height: 1.25;
+                }
+            }
+        }
+
+        // ELEMENT NIVEAU #2, #3 #4
+        .ref-xp-2,
+        .ref-comp-2,
+        .ref-work-2 {
+            align-items: center;
+            justify-content: center; 
+            transform: rotate(90deg);
+            h5{              
+                text-align: left;
+                letter-spacing: 5px;
+            }
+        }
+        .redactionnel {
+            .bloc-cv {
+                border-top: 1px dashed $white;
+                padding-top: 24px;
+                display: flex;
+                @media #{$medium-down-portrait} {
+                    border-top: 1px dashed $white;
+                    padding-top: 24px;
+                    margin-top: 24px;
+                }
+                @media #{$small-down-landscape} {
+                    border-top: none;
+                    padding-top: 0;
+                    margin-top: -16px;
+                }
+                ul {
+                    display: block;
+                    width: 100%;
+                    li {
+                        display: block;
+                        line-height: 1.25;
+                        padding-bottom: 4.5vh;
+                        @media #{$small-down-landscape} {
+                            padding-bottom: 1.5vh;
+                        }
+                    }
+                }
+                &.experience {
+                    li {
+                        list-style: square inside;
+                        .function {
+                            font-weight: 600;
+                            display: block;
+                        }
+                        .date {
+                            display: block;
+                            opacity: 0.45;
+                            margin-top: 1.5vh;
+                        }
+                    }
+                }
+                &.contact {
+                    line-height: 1.5;
+                }
+                &.competences {
+                    li {
+                        list-style-type: disc;
+                        padding-bottom: 2.25vh;
+                    }
+                    .important {
+                        font-weight: 700;
+                    }
+                }
+                &.works{
+                    ul {
+                        li {
+                            padding-bottom: 2vh;
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ref-comp-2 .redactionnel {
+            .bloc-cv {
+                border-top: 1px dashed $black;
+            }
+        }
+
+        a.ref-git:link,
+        a.ref-git:hover,
+        a.ref-git:visited,
+        a.ref-git:active{                
+            margin-top: 12px;
+            color: $white;
+            display:flex;  
+            text-decoration: none;  
+            align-items: center;
+            i.logo-git {
+                align-self: flex-start;
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                position: relative;
+                fill: $white;
+            }
+            span{
+                padding-left:8px;
+                margin-top:4px;
+            }
+        }
+        i.puce-work {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            fill: $white;
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+#services{
+    padding-top: 12.5vh;
+    position: relative;
+    .services-content {
+        padding: 0 15px;
+        margin: 2vh 0 8vh;
+        font-family: $basefont;
+        h5 {
+            font-size: 1rem; 
+            color: $gray-900;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1rem; 
+            line-height: 1.75;
+            color: $gray-600;
+        }
+    }
+
+    .fas {
+        color: $red;
+        font-size: 2.25rem;
+        padding-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+:root {
+    --cols: 8;
+    --gridSize: calc(100vw / var(--cols));
+    --maxSize: 200px;
+}
+
+@media #{$mega-up} {
+    :root {
+        --gridSize: 200px;
+    }
+}
+
+#grid-container {
+    width: 100vw;
+    max-width: 1600px;
+    overflow: hidden;
+    margin: 0 auto;
+    grid-template-columns: repeat(var(--cols), var(--gridSize));
+    display: grid;
+    grid-gap: 0px;
+    
+    .grid-cellule-base {
+        width: var(--gridSize);
+        max-width: var(--maxSize);
+        height: var(--gridSize);
+        min-height: var(--gridSize);
+        max-height: var(--maxSize);
+        position: relative;
+        grid-row: span 1 / span 1;
+        grid-column: span 1 / span 1;
+    }
+}
+

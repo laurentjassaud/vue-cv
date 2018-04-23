@@ -1,0 +1,43 @@
+.container {
+	margin: 0 20px;
+}
+
+@media #{$large-up} {
+	.container {
+		width: 1150px;
+		margin: 0 auto;
+	}
+}
+
+/* COULEUR DE FOND */
+
+.bg-black{
+	background-color: $black;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-light-grey {
+    background-color: $light-grey;
+}
+
+/*--------------------------------------------------*/
+
+
+
+/* ALIGNEMENT */
+
+.center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.justify-r {
+    justify-content: flex-end;
+}
+
+/*--------------------------------------------------*/
+
